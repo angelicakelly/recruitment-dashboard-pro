@@ -45,42 +45,4 @@ To run this project on your local machine, follow these steps.
 git clone [https://github.com/angelicakelly/recruitment-dashboard-pro.git](https://github.com/angelicakelly/recruitment-dashboard-pro.git)
 cd recruitment-dashboard-pro
 
-### 2. Backend Setup (Django)
-# Navigate to the backend folder
-cd backend
-
-# Create and activate the virtual environment
-python3 -m venv venv
-source venv/bin/activate
-
-# Install the dependencies
-pip install -r requirements.txt
-
-# Run database migrations
-python manage.py migrate
-
-# Create a superuser for the admin panel
-python manage.py createsuperuser
-
-# Start the Django server
-python manage.py runserver
-
-### 3. Frontend Setup (React)
-
-# Navigate to the frontend folder
-cd frontend
-
-# Install the dependencies
-npm install
-
-# Start the React development server
-npm run dev
-
-### Contact
-
-GitHub: angelicakelly
-
-LinkedIn: https://www.linkedin.com/in/angiekellyweb/
-
-Email: angelicakellyfl@gmail.com
 
