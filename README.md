@@ -46,3 +46,11 @@ git clone [https://github.com/angelicakelly/recruitment-dashboard-pro.git](https
 cd recruitment-dashboard-pro
 
 
+### Contact
+If you have any questions or want to connect, you can find me here:
+
+GitHub: angelicakelly
+
+LinkedIn: https://www.linkedin.com/in/angiekellyweb/
+
+Email: angelicakellyfl@gmail.com
