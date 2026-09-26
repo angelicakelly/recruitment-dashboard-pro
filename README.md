@@ -1,56 +1,61 @@
 # Recruitment Dashboard Pro
 
-![Recruitment Dashboard Pro Preview]({URL_IMAGE_PREVIEW})
+Recruitment Dashboard Pro is a full-stack recruitment management application built with React and Django REST Framework.
 
-A **Full-Stack** recruitment management system designed to help HR teams streamline their workflow, from candidate intake to interview tracking. This project serves as a showcase of my skills in end-to-end web application development.
+The project demonstrates how a React frontend can consume a REST API built with Django to display and manage recruitment-related data.
 
----
+## Project Status
 
-## 🚧 Status: In Development 🚧
+Active development. The backend API structure and frontend integration are in place, with additional workflow and interface improvements planned.
 
-This project is currently a work in progress. New features and improvements are being added continuously.
+## Current Functionality
 
----
+- Candidate data model with name, email, phone number, skills, status, and creation date.
+- Task model linked to candidates and assigned users.
+- Social mention model for storing simulated recruiting-related mentions.
+- REST API endpoints for candidates, tasks, and social mentions.
+- React frontend that fetches candidate data from the Django API and displays it in the interface.
 
-## Key Features
-
-* **Candidate Management**: A full CRUD (Create, Read, Update, Delete) system for managing candidate profiles.
-* **Application Pipeline**: Tracks candidate progress through different stages of the hiring process.
-* **Intuitive Dashboard**: Provides a quick overview of candidate statuses.
-
----
-
-## Technologies Used
+## Tech Stack
 
 ### Backend
-* **Python**: Primary programming language.
-* **Django**: Web framework for building the REST API.
-* **Django REST Framework**: For creating robust API endpoints.
-* **SQLite**: Development database.
+
+- Python
+- Django 5
+- Django REST Framework
+- SQLite for local development
 
 ### Frontend
-* **JavaScript**: Primary programming language.
-* **React**: Library for building the user interface.
-* **Vite**: Build tool for a fast and efficient development environment.
-* **Axios**: HTTP client for communicating with the backend.
 
----
+- JavaScript
+- React 19
+- Vite
+- Axios
+- CSS
 
-## Local Setup and Running the Project
+### Development
 
-To run this project on your local machine, follow these steps.
+- Git
+- GitHub
 
-### 1. Clone the Repository Backend Setup (Django)
-```bash
-git clone [https://github.com/angelicakelly/recruitment-dashboard-pro.git](https://github.com/angelicakelly/recruitment-dashboard-pro.git)
-cd recruitment-dashboard-pro
+## Project Structure
 
+```text
+recruitment-dashboard-pro/
+├── backend/
+│   ├── api/
+│   ├── core/
+│   ├── manage.py
+│   └── requirements.txt
+└── frontend/
+    ├── src/
+    ├── public/
+    └── package.json
 
-### Contact
-If you have any questions or want to connect, you can find me here:
+## API Endpoints
 
-GitHub: angelicakelly
+The Django REST Framework router currently exposes endpoints for:
 
-LinkedIn: https://www.linkedin.com/in/angiekellyweb/
-
-Email: angelicakellyfl@gmail.com
+- `/api/candidates/`
+- `/api/tasks/`
+- `/api/social-mentions/`
