@@ -38,6 +38,7 @@ Active development. The backend API structure and frontend integration are in pl
 - Git
 - GitHub
 
+
 ## Project Structure
 
 ```text
@@ -51,16 +52,20 @@ recruitment-dashboard-pro/
     ├── src/
     ├── public/
     └── package.json
+```
 
 ## API Endpoints
 
-The Django REST Framework router currently exposes endpoints for:
+``` The Django REST Framework router currently exposes endpoints for:
 
 - `/api/candidates/`
 - `/api/tasks/`
 - `/api/social-mentions/`
+```
 
 ## Preview
 
 A screenshot of the application will be added as the interface evolves.
+
+
 
