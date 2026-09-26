@@ -58,7 +58,9 @@ recruitment-dashboard-pro/
 
 The Django REST Framework router currently exposes endpoints for:
 
-
+- `/api/candidates/`
+- `/api/tasks/`
+- `/api/social-mentions/`
   
 
 ## Preview
