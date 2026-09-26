@@ -65,7 +65,7 @@ The Django REST Framework router currently exposes endpoints for:
 
 ## Preview
 
-A screenshot of the application will be added as the interface evolves.
+![Recruitment Dashboard Pro](./docs/recruitment-dashboard-preview.png)
 
 
 
