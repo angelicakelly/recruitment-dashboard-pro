@@ -9,7 +9,7 @@ function App() {
   useEffect(() => {
     // Asegúrate de que tu servidor de Django esté corriendo
     // python manage.py runserver
-    axios.get('http://127.0.0.1:8000/api/candidates/')
+    axios.get('/api/candidates/')
       .then(response => {
         setCandidates(response.data);
         setLoading(false);
