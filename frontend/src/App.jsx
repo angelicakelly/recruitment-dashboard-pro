@@ -1,47 +1,82 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
-import './App.css'; // Mantenemos el archivo de estilos
+import './App.css';
 
 function App() {
   const [candidates, setCandidates] = useState([]);
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    // Asegúrate de que tu servidor de Django esté corriendo
-    // python manage.py runserver
-    axios.get('/api/candidates/')
-      .then(response => {
+    axios
+      .get('/api/candidates/')
+      .then((response) => {
         setCandidates(response.data);
         setLoading(false);
       })
-      .catch(error => {
+      .catch((error) => {
         console.error('There was an error fetching the data!', error);
         setLoading(false);
       });
-  }, []); // El array vacío asegura que se ejecute solo una vez
+  }, []);
 
   return (
-    <div className="App">
-      <header className="App-header">
+    <div className="app-shell">
+      <header className="hero">
+        <p className="eyebrow">Recruitment Management</p>
         <h1>Recruitment Dashboard Pro</h1>
+        <p className="hero-copy">
+          A full-stack recruitment dashboard built with React and Django REST Framework.
+        </p>
       </header>
-      <main>
-        <h2>Candidates</h2>
-        {loading ? (
-          <p>Loading candidates...</p>
-        ) : (
+
+      <main className="dashboard">
+        <div className="section-heading">
           <div>
-            {candidates.length > 0 ? (
-              <ul>
-                {candidates.map(candidate => (
-                  <li key={candidate.id}>
-                    <strong>{candidate.name}</strong> - {candidate.email}
-                  </li>
-                ))}
-              </ul>
-            ) : (
-              <p>No candidates found. Please add some from the Django admin.</p>
-            )}
+            <p className="eyebrow">Candidate Pipeline</p>
+            <h2>Candidates</h2>
+          </div>
+
+          <div className="candidate-count">
+            {candidates.length} candidate{candidates.length === 1 ? '' : 's'}
+          </div>
+        </div>
+
+        {loading ? (
+          <div className="status-card">Loading candidates...</div>
+        ) : candidates.length > 0 ? (
+          <div className="candidate-grid">
+            {candidates.map((candidate) => (
+              <article className="candidate-card" key={candidate.id}>
+                <div className="candidate-card-top">
+                  <div>
+                    <h3>{candidate.name}</h3>
+                    <p className="candidate-email">{candidate.email}</p>
+                  </div>
+
+                  <span className="status-badge">
+                    {candidate.current_status || 'New'}
+                  </span>
+                </div>
+
+                <div className="candidate-meta">
+                  {candidate.phone_number && (
+                    <div>
+                      <span className="meta-label">Phone</span>
+                      <p>{candidate.phone_number}</p>
+                    </div>
+                  )}
+
+                  <div>
+                    <span className="meta-label">Skills</span>
+                    <p>{candidate.skills || 'Not provided'}</p>
+                  </div>
+                </div>
+              </article>
+            ))}
+          </div>
+        ) : (
+          <div className="status-card">
+            No candidates found. Add one through the Django REST API.
           </div>
         )}
       </main>
